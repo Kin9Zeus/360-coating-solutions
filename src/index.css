@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   360 — design tokens
+   Steel & Silk: carbon + structural sans for 360 Coating Solutions,
+   warm sand + editorial serif for 360 Painting & Wall Design,
+   champagne gold shared, logo teal used sparingly as the brush mark.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-carbon: #0b0f19;
+  --color-ink: #111827;
+  --color-steel: #1b2333;
+  --color-sand: #f5ebe6;
+  --color-sand-deep: #eadfd5;
+  --color-bone: #fbf7f3;
+  --color-gold: #c5a880;
+  --color-gold-bright: #d4af37;
+  --color-teal: #2a9da8;
+  --color-clay: #3d322a;
+
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-sans: 'Archivo Variable', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-carbon font-sans text-sand antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c5a880;
+  color: #0b0f19;
+}
+
+:focus-visible {
+  outline: 2px solid #c5a880;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Small caps tracking label used for every section eyebrow */
+.eyebrow {
+  @apply font-sans text-[11px] font-semibold tracking-[0.28em] uppercase;
+}
+
+/* Structural "steel" headline — Archivo pushed wide */
+.steel-head {
+  font-family: var(--font-sans);
+  font-variation-settings: 'wdth' 118;
+  letter-spacing: -0.01em;
+}
+
+/* Editorial "silk" headline — Fraunces at large optical size */
+.silk-head {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 120;
+  letter-spacing: -0.015em;
+}
+
+.silk-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-variation-settings: 'opsz' 100;
+}
+
+/* Hero degree dial — pure CSS transform loop, cheap on every GPU */
+@keyframes dial-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.dial-spin {
+  animation: dial-spin 120s linear infinite;
+  will-change: transform;
+}
+
+/* Gold beam used in the Steel↔Silk gateway sweep */
+.beam-gradient {
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.16) 38%,
+    rgba(212, 175, 55, 0.55) 50%,
+    rgba(212, 175, 55, 0.16) 62%,
+    transparent 100%
+  );
+}
+
+/* Fine hairline grid texture for steel surfaces */
+.steel-grid {
+  background-image:
+    linear-gradient(rgba(245, 235, 230, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 235, 230, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Soft radial warmth for silk surfaces (background-image only — must never
+   override the section's background-color utility) */
+.silk-glow {
+  background-image:
+    radial-gradient(1100px 520px at 82% -8%, rgba(197, 168, 128, 0.28), transparent 64%),
+    radial-gradient(900px 480px at -12% 108%, rgba(42, 157, 168, 0.1), transparent 60%);
+}
+
+/* Scroll cue droplet in the hero */
+@keyframes cue {
+  0%   { transform: translateY(-100%); }
+  60%  { transform: translateY(250%); }
+  100% { transform: translateY(250%); }
+}
+
+/* Reduced motion policy (per owner's choice): the signature GSAP moments —
+   preloader, hero entrance, gateway beam sweep, scroll reveals — play for
+   everyone. Only *continuous* CSS loops are quieted here (the endless dial
+   spin and the scroll-cue droplet), and scroll-parallax is gated in JS via
+   gsap.matchMedia. Brief one-shot transitions (hover, focus) are left intact
+   so the page still feels alive. html.force-motion is the ?forcemotion QA
+   escape hatch (see lib/gsap.js). */
+@media (prefers-reduced-motion: reduce) {
+  html:not(.force-motion) {
+    scroll-behavior: auto;
+  }
+  /* Stop only never-ending CSS keyframe loops; transitions are untouched. */
+  html:not(.force-motion) *,
+  html:not(.force-motion) *::before,
+  html:not(.force-motion) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  html:not(.force-motion) .dial-spin {
+    animation: none;
+  }
+}
