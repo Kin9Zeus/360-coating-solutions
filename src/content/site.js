@@ -6,11 +6,11 @@
 
 export const CONTACT = {
   phone: '(307) 251-7072',
-  email: 'info@360coatingsolutions.com', // TODO: confirm the address to publish
+  email: 'admin@360coatingsolutions.com',
   address: 'PO Box 630082, Highlands Ranch, CO 80163',
   serviceArea: 'Highlands Ranch · Denver Front Range',
-  instagram: 'https://www.instagram.com/360coatingsolutions',
-  facebook: 'https://www.facebook.com/profile.php?id=100094539626039',
+  instagram: 'https://www.instagram.com/360paintingandwalldesign',
+  facebook: 'https://www.facebook.com/share/191onPjoUz/',
 }
 
 // The contact form posts to /api/contact, handled by server/index.js
