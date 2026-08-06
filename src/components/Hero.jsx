@@ -212,7 +212,16 @@ export default function Hero({ ready }) {
         </div>
       </div>
 
-      <div data-hero-cue className="absolute bottom-7 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3" aria-hidden="true">
+      {/* Hidden below sm: on short mobile viewports the stacked CTA buttons
+          push content tall enough to collide with this bottom-anchored cue
+          (measured 17px overlap at 375×667). Touch users already know to
+          swipe/scroll, so the hint earns its keep on desktop only, where a
+          mouse-driven visitor benefits from the nudge. */}
+      <div
+        data-hero-cue
+        className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 sm:flex"
+        aria-hidden="true"
+      >
         <p className="eyebrow text-sand/60">Scroll to transform the room</p>
         <span className="block h-10 w-px overflow-hidden bg-sand/20">
           <span className="block h-4 w-px animate-[cue_1.8s_ease-in-out_infinite] bg-gold" />
