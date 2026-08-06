@@ -3,6 +3,7 @@
 // is needed, and there's exactly one place that holds the Resend API key.
 import 'dotenv/config'
 import express from 'express'
+import compression from 'compression'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import rateLimit from 'express-rate-limit'
@@ -43,6 +44,7 @@ const isValidEmail = (v = '') => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
 
 const app = express()
 app.set('trust proxy', 1) // Railway sits behind a proxy; needed for accurate rate-limit IPs
+app.use(compression()) // gzip/brotli text assets — smaller payload, better LCP
 app.use(express.json())
 
 const contactLimiter = rateLimit({
@@ -116,8 +118,22 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
 // Everything else is the static build — one service does both jobs.
 // A path-less app.use() catches every remaining request without relying on
 // wildcard route syntax, which changed between Express 4 and 5.
-app.use(express.static(distDir))
+app.use(
+  express.static(distDir, {
+    setHeaders(res, filePath) {
+      // Vite fingerprints hashed asset filenames, so those are safe to cache
+      // hard — the name changes whenever the content does. index.html and the
+      // crawler files must stay fresh so deploys and SEO edits go live at once.
+      if (/\.(js|css|webp|jpg|png|svg|woff2?|mp4)$/i.test(filePath) && /-[A-Za-z0-9_-]{8,}\./.test(filePath)) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+      } else {
+        res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate')
+      }
+    },
+  }),
+)
 app.use((_req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate')
   res.sendFile(path.join(distDir, 'index.html'))
 })
 

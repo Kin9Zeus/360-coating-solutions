@@ -145,6 +145,39 @@ export const PAINTING_SERVICES = [
   },
 ]
 
+// Real questions prospects ask, answered in 40–60 words each — the length AI
+// search engines extract cleanest. Every answer is grounded in something
+// verifiable from the business (testimonials, service pages), never invented.
+// These render visibly in the FAQ section AND feed the FAQPage schema in
+// index.html; Google requires FAQ schema content to be visible on the page,
+// so the two must stay in sync.
+export const FAQS = [
+  {
+    q: 'Do you handle HOA and ARC color approvals?',
+    a: 'Yes — end to end. We prepare the color submittals, complete the paperwork, and attend the HOA and ARC committee meetings on your behalf. Homeowners in Highlands Ranch and Backcountry regularly hand us a non-compliance letter and never have to appear at a meeting themselves.',
+  },
+  {
+    q: 'How long does a whole-home interior repaint take?',
+    a: 'Most homes finish in days rather than weeks. A recent Backcountry project covered an entire main level and second floor in four days, including protecting and moving furniture. We sequence rooms so the house stays livable and hand it back clean.',
+  },
+  {
+    q: 'Can I see the color before you start painting?',
+    a: 'Yes. Tatiana designs your room first and delivers photorealistic renderings, so you approve the finished look before a brush is lifted. Color is chosen around how daylight actually moves through your space, not how a chip looks under store lighting.',
+  },
+  {
+    q: 'Which Colorado communities do you serve?',
+    a: 'We serve Highlands Ranch, Lone Tree, Centennial, South Glenn, Columbine, Englewood, Littleton, Glendale, Lakewood, Aurora and Denver — the Front Range south of Denver, with a concentrated presence in the Backcountry neighborhood of Highlands Ranch.',
+  },
+  {
+    q: 'What makes exterior paint last in Colorado?',
+    a: 'Colorado sun, hail and rapid freeze–thaw cycles destroy unprotected surfaces. Longevity comes from specification, not brand: primers that genuinely bond to the substrate, and topcoats chosen for UV resistance and the traffic and moisture that surface actually sees.',
+  },
+  {
+    q: 'How long does Venetian plaster last?',
+    a: 'With basic care, a properly applied Venetian plaster wall stays beautiful for 15–20 years. We hand-trowel three to four whisper-thin coats, burnish to a polished stone-like depth, then seal it — which is what makes the finish resist aging.',
+  },
+]
+
 // The specialty trades — carried over from the old site's service pages.
 // These sit between the two wings because both companies draw on them.
 export const SPECIALTY_TRADES = [

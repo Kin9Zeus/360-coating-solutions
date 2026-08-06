@@ -10,6 +10,7 @@ import PaintingWing from './components/PaintingWing'
 import SpecialtyTrades from './components/SpecialtyTrades'
 import Family from './components/Family'
 import Reviews from './components/Reviews'
+import Faq from './components/Faq'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -29,6 +30,7 @@ export default function App() {
         <SpecialtyTrades />
         <Family />
         <Reviews />
+        <Faq />
         <Contact />
       </main>
       <Footer />

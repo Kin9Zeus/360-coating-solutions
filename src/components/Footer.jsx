@@ -26,6 +26,7 @@ export default function Footer() {
                 ['#craft', 'Specialty Trades'],
                 ['#family', 'Our Family'],
                 ['#reviews', 'Reviews'],
+                ['#faq', 'FAQ'],
                 ['#contact', 'Contact'],
               ].map(([href, label]) => (
                 <li key={href}>
