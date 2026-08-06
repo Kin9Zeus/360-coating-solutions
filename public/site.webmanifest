@@ -1,0 +1,12 @@
+{
+  "name": "360 Coating Solutions",
+  "short_name": "360 Coating",
+  "icons": [
+    { "src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0B0F19",
+  "background_color": "#0B0F19",
+  "display": "browser"
+}
