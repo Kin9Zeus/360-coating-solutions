@@ -13,6 +13,14 @@ export const CONTACT = {
   facebook: 'https://www.facebook.com/share/191onPjoUz/',
 }
 
+// Studio credit shown in the footer. Kept here (not hardcoded in Footer.jsx)
+// so the studio mark follows the same edit-in-one-place rule as everything
+// else on this page.
+export const CREDIT = {
+  studio: 'Devleck',
+  whatsapp: 'https://wa.link/z2gudn',
+}
+
 // The contact form posts to /api/contact, handled by server/index.js
 // (Resend). Which inbox each inquiry lands in — homeowner vs. builder — is
 // configured there via CONTACT_EMAIL_HOMEOWNER / CONTACT_EMAIL_BUILDER env
