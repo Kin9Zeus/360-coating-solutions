@@ -12,7 +12,7 @@ function StudioSignature() {
       href={CREDIT.whatsapp}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Site designed and developed by ${CREDIT.studio} — message the studio on WhatsApp (opens in a new tab)`}
+      aria-label={`Site designed and developed by ${CREDIT.studio}. Message the studio on WhatsApp (opens in a new tab)`}
       className="group relative inline-flex items-center gap-2.5 self-start overflow-hidden rounded-full border border-gold/20 px-4 py-2 transition-colors duration-300 hover:border-gold/55 sm:self-auto"
     >
       <span
@@ -56,7 +56,7 @@ export default function Footer() {
           <nav aria-label="Footer">
             <ul className="grid grid-cols-2 gap-x-12 gap-y-3 text-sm">
               {[
-                ['#circle', 'The Circle'],
+                ['#circle', 'About Us'],
                 ['#coating', 'For Builders'],
                 ['#painting', 'For Homeowners'],
                 ['#craft', 'Specialty Trades'],

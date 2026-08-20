@@ -26,44 +26,36 @@ export default function Family() {
             <div className="relative">
               <div className="pointer-events-none absolute -right-3 -bottom-3 h-full w-full border border-gold/40" aria-hidden="true" />
               <img
-                src={IMG.familyPond.src}
-                width={IMG.familyPond.w}
-                height={IMG.familyPond.h}
-                alt={IMG.familyPond.alt}
+                src={IMG.familyPortrait.src}
+                width={IMG.familyPortrait.w}
+                height={IMG.familyPortrait.h}
+                alt={IMG.familyPortrait.alt}
                 loading="lazy"
                 className="relative w-full object-cover"
               />
             </div>
             <figcaption className="eyebrow mt-7 text-sand/50">
-              Backcountry, Colorado — home turf
+              Backcountry, Colorado · Home turf
             </figcaption>
           </figure>
 
           <div>
             <h2 data-reveal className="silk-head text-4xl leading-[1.08] sm:text-5xl">
-              The reason behind
-              <span className="silk-italic text-gold"> the name.</span>
+              Our
+              <span className="silk-italic text-gold"> Family.</span>
             </h2>
 
-            <div className="mt-8 max-w-xl space-y-5 text-[15px] leading-relaxed text-sand/75 sm:text-base">
+            <div className="mt-8 max-w-xl text-base leading-relaxed text-sand/75 sm:text-lg">
               <p data-reveal>
-                Tatiana and Andrés met in church in Colombia thirty years ago. Two engineering careers, an MBA,
-                a pilot&rsquo;s license and one American dream later, they build beautiful things in Colorado —
-                together, brick by brick, wall by wall.
-              </p>
-              <p data-reveal>
-                Mateo, ten, is a competitive tennis player ranked among the state&rsquo;s top young
-                mathematicians. Lucas, five, mastered tennis scoring before he could spell his own name.
-                The competitive streak is clearly hereditary — so is the kindness.
-              </p>
-              <p data-reveal>
-                Sunday mornings are sacred: phones put away, Andrés on breakfast duty, movie night to close.
-                A family that protects its own circle knows exactly how to care for yours.
+                360 Coating Solutions is more than our business; it is part of our family. As a husband-and-wife
+                team raising two boys, Tatiana and Andrés have built the company around the same values they
+                teach at home: integrity, hard work, respect and genuine care. We treat every home as if it were
+                our own and welcome every client into the 360 family.
               </p>
             </div>
 
-            <ul data-reveal className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
-              {['Phones away on Sundays', 'Big breakfasts', 'Movie nights'].map((r) => (
+            <ul data-reveal className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+              {['Integrity', 'Hard work', 'Respect', 'Genuine care'].map((r) => (
                 <li key={r} className="flex items-center gap-2.5 text-sm text-sand/60">
                   <svg viewBox="0 0 12 12" className="h-3 w-3 text-gold" aria-hidden="true">
                     <circle cx="6" cy="6" r="5" fill="none" stroke="currentColor" strokeWidth="1.4" />

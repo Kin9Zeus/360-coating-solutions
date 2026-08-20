@@ -1,7 +1,10 @@
 /**
- * Section marker. The page is one full 360° rotation — each section sits at a
- * bearing on the dial, so eyebrows read "120° — 360 COATING SOLUTIONS"
- * instead of generic 01/02/03 numbering.
+ * Section marker. Each section still sits at a bearing on the 360° dial — the
+ * small arc glyph is rotated by `deg`, so the mark advances around the circle
+ * as the page is traveled. The bearing is no longer spelled out in words: read
+ * cold, "120° — 360 Coating Solutions" raised the question "120 what?" rather
+ * than answering it, so the number now lives only in the glyph and the
+ * progress ring.
  */
 export default function Eyebrow({ deg, label, tone = 'dark', className = '' }) {
   const text = tone === 'dark' ? 'text-gold' : 'text-clay/70'
@@ -19,9 +22,7 @@ export default function Eyebrow({ deg, label, tone = 'dark', className = '' }) {
           transform={`rotate(${deg} 8 8)`}
         />
       </svg>
-      <span>
-        {deg}° — {label}
-      </span>
+      <span>{label}</span>
       <span className={`h-px w-12 ${line}`} aria-hidden="true" />
     </p>
   )

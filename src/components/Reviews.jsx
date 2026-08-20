@@ -32,7 +32,7 @@ function Lightbox({ review, onClose }) {
     >
       <div className="relative max-h-full w-full max-w-xl overflow-hidden rounded-lg bg-bone shadow-2xl">
         <div className="flex items-center justify-between border-b border-clay/10 px-5 py-3.5">
-          <p className="eyebrow text-clay/60">Original post — BackCountry Colorado Families</p>
+          <p className="eyebrow text-clay/60">Original post · BackCountry Colorado Families</p>
           <button
             ref={closeRef}
             type="button"
@@ -74,7 +74,7 @@ export default function Reviews() {
           <span className="silk-italic text-gold"> keep posting.</span>
         </h2>
         <p data-reveal className="mt-6 max-w-2xl text-base leading-relaxed text-sand/65 sm:text-lg">
-          Unprompted recommendations from the BackCountry Colorado Families community — receipts included.
+          Unprompted recommendations from the BackCountry Colorado Families community, receipts included.
           Tap any card to see the original post.
         </p>
 

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import logo360 from '../assets/img/logo-360-coating-white.webp'
 
 const LINKS = [
-  { href: '#circle', label: 'The Circle' },
+  { href: '#circle', label: 'About Us' },
   { href: '#coating', label: 'For Builders' },
   { href: '#painting', label: 'For Homeowners' },
   { href: '#craft', label: 'Craft' },
@@ -52,7 +52,7 @@ export default function Nav() {
       }`}
     >
       <nav aria-label="Main" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-[72px] sm:px-8">
-        <a href="#top" className="rounded-sm" aria-label="360 — back to top">
+        <a href="#top" className="rounded-sm" aria-label="360, back to top">
           <Mark />
         </a>
 

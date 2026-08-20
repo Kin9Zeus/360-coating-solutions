@@ -16,17 +16,17 @@ import reelFacadeB from '../assets/videos/facade-transform-b-web.mp4'
 import posterFacadeB from '../assets/videos/facade-transform-b-poster.webp'
 
 const REELS = {
-  venetian: { src: reelVenetian, poster: posterVenetian, label: 'Venetian plaster — the polished finish' },
-  carpentry: { src: reelCarpentry, poster: posterCarpentry, label: 'Custom carpentry — built-in cabinetry' },
-  millwork: { src: reelMillwork, poster: posterMillwork, label: 'Custom millwork — crown & panel detail' },
+  venetian: { src: reelVenetian, poster: posterVenetian, label: 'Venetian Plaster, the Polished Finish' },
+  carpentry: { src: reelCarpentry, poster: posterCarpentry, label: 'Custom Carpentry, Built-in Cabinetry' },
+  millwork: { src: reelMillwork, poster: posterMillwork, label: 'Custom Millwork, Crown & Panel Detail' },
 }
 
 // The facade service is shown as a pair — two different Colorado homes, each
 // carried from dated to current, because the proof of exterior work is the
 // before-and-after itself.
 const FACADE_REELS = [
-  { src: reelFacadeA, poster: posterFacadeA, label: 'Board-and-batten gable & charcoal doors' },
-  { src: reelFacadeB, poster: posterFacadeB, label: 'Siding, trim & garage doors refreshed' },
+  { src: reelFacadeA, poster: posterFacadeA, label: 'Board-and-Batten Gable & Charcoal Doors' },
+  { src: reelFacadeB, poster: posterFacadeB, label: 'Siding, Trim & Garage Doors Refreshed' },
 ]
 
 export default function SpecialtyTrades() {
@@ -45,9 +45,10 @@ export default function SpecialtyTrades() {
             Where paint ends,
             <span className="silk-italic text-teal"> craft begins.</span>
           </h2>
-          <p data-reveal className="max-w-sm text-[15px] leading-relaxed text-clay/70">
-            Some finishes can&rsquo;t be rolled on. Our own crews handle the trades that give a home its
-            architecture — no subcontractor roulette, one standard throughout.
+          <p data-reveal className="max-w-md text-[15px] leading-relaxed text-clay/70">
+            Some finishes require more than paint. Our dedicated crews manage the specialized trades that give
+            a home its architectural character, one accountable team and one consistent standard of
+            craftsmanship from beginning to end.
           </p>
         </div>
 

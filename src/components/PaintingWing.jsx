@@ -41,9 +41,10 @@ export default function PaintingWing() {
         </div>
 
         <p data-reveal className="mt-6 max-w-2xl text-base leading-relaxed text-clay/75 sm:text-lg">
-          Tatiana designs the room before a single brush is lifted — photorealistic renderings, color stories
-          built around how you live, and finishes executed like couture. Watch a few come to life below; her
-          clients in Backcountry call her a perfectionist, and she takes it as a compliment.
+          Tatiana designs every room before a single brush is lifted, creating photorealistic renderings,
+          personalized color stories and finishes executed with couture-level precision. Watch a few of her
+          designs come to life below. Her BackCountry clients call her a perfectionist, and she proudly takes
+          it as a compliment.
         </p>
 
         {/* rendering reels — a bento of her design videos */}
@@ -51,35 +52,40 @@ export default function PaintingWing() {
           <VideoReel
             src={reelReveal}
             poster={posterReveal}
-            label="Living room — bare wall to finished space"
+            label="Living Room, Bare Wall to Finished Space"
+            byline="By Tatiana"
             badge="Rendering"
             className="aspect-video lg:col-span-6 lg:col-start-4 lg:row-start-1"
           />
           <VideoReel
             src={reelBedroom}
             poster={posterBedroom}
-            label="Geometric accent wall — primary bedroom"
+            label="Geometric Accent Wall, Primary Bedroom"
+            byline="By Tatiana"
             badge="Rendering"
             className="aspect-video lg:col-span-3 lg:col-start-4 lg:row-start-2"
           />
           <VideoReel
             src={reelDining}
             poster={posterDining}
-            label="Dining room — paneled accent wall"
+            label="Dining Room, Paneled Accent Wall"
+            byline="By Tatiana"
             badge="Rendering"
             className="aspect-[3/4] lg:col-span-3 lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:aspect-auto"
           />
           <VideoReel
             src={reelBasement}
             poster={posterBasement}
-            label="Media room — full transformation"
+            label="Media Room, Full Transformation"
+            byline="By Tatiana"
             badge="Rendering"
             className="aspect-[3/4] lg:col-span-3 lg:col-start-10 lg:row-start-1 lg:row-span-2 lg:aspect-auto"
           />
           <VideoReel
             src={reelStyled}
             poster={posterStyled}
-            label="Living room — color & styling"
+            label="Living Room, Color & Styling"
+            byline="By Tatiana"
             badge="Rendering"
             className="aspect-video lg:col-span-3 lg:col-start-7 lg:row-start-2"
           />
@@ -90,8 +96,8 @@ export default function PaintingWing() {
           <aside data-reveal className="order-2 lg:order-1">
             <blockquote className="border-l-2 border-teal/60 pl-6">
               <p className="silk-italic text-2xl leading-snug text-clay sm:text-[28px]">
-                &ldquo;Money is not my motivation. Making people happy is. A smile is the most powerful and
-                inexpensive outfit anyone can wear.&rdquo;
+                &ldquo;My greatest motivation is seeing my clients genuinely happy with the spaces we create
+                together.&rdquo;
               </p>
               <footer className="mt-5">
                 <p className="silk-head text-xl font-semibold text-clay">Tatiana Gomez</p>
@@ -99,9 +105,11 @@ export default function PaintingWing() {
               </footer>
             </blockquote>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-clay/70">
-              Industrial engineer, MBA in global management, fifteen years in oil &amp; gas — and the warmest
-              presence to ever walk a job site. Tatiana builds what she calls a <em>perfect bubble</em> of
-              client happiness: renderings first, honest timelines, spotless handoffs.
+              An industrial engineer with an MBA in Global Management and fifteen years of experience in the
+              oil and gas industry, Tatiana brings technical discipline, strategic thinking and genuine warmth
+              to every project. Her goal is to create beautifully designed, polished and inviting spaces
+              through thoughtful renderings, transparent timelines, meticulous execution and a spotless final
+              handoff.
             </p>
           </aside>
 

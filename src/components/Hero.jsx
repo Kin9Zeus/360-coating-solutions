@@ -171,7 +171,7 @@ export default function Hero({ ready }) {
 
       <div data-hero-content className="relative mx-auto w-full max-w-7xl px-5 pt-28 pb-24 sm:px-8">
         <p data-hero-eyebrow className="eyebrow mb-7 text-gold">
-          Highlands Ranch, Colorado — The Gomez Family Companies
+          Highlands Ranch, Colorado · The Gomez Family Companies
         </p>
 
         <h1 className="max-w-4xl text-[clamp(2.6rem,8vw,6.2rem)] leading-[1.02]">

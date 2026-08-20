@@ -91,7 +91,7 @@ export default function Gateway() {
           <p className="mt-2 font-sans text-lg font-medium text-clay/90">360 Painting &amp; Wall Design</p>
           <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-clay/70">
             Accent walls, color stories and whole-home transformations for Colorado&rsquo;s most exclusive
-            neighborhoods — designed with empathy, finished like couture.
+            neighborhoods, designed with empathy and finished like couture.
           </p>
           <span className="mt-8 inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.16em] text-clay uppercase">
             Enter the studio

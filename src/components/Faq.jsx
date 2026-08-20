@@ -28,7 +28,7 @@ export default function Faq() {
           </h2>
           <p data-reveal className="max-w-sm text-[15px] leading-relaxed text-sand/65">
             Straight answers, no estimating games. If yours isn&rsquo;t here, call
-            or text — you&rsquo;ll reach Tatiana or Andrés, not a call center.
+            or text. You&rsquo;ll reach Tatiana or Andrés, not a call center.
           </p>
         </div>
 

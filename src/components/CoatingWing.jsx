@@ -32,10 +32,12 @@ const ICONS = {
   ),
 }
 
+const BUILDERS = ['Toll Brothers', 'Aspen View Homes', 'Richmond American Homes']
+
 const CREDENTIALS = [
-  { k: '15+ years', v: 'engineering leadership in high-stakes oil & gas production' },
-  { k: 'ATP-certified pilot', v: 'trained at Centennial Airport — checklists are a way of life' },
-  { k: 'B.S. Computer Science', v: 'University of Florida — systems thinking on every site' },
+  { k: '15+ years', v: 'Engineering leadership in high-stakes oil & gas production' },
+  { k: 'ATP-certified pilot', v: 'Trained at Centennial Airport, where checklists are a way of life' },
+  { k: 'B.S. Computer Science', v: 'University of Florida, systems thinking on every site' },
 ]
 
 export default function CoatingWing() {
@@ -81,7 +83,7 @@ export default function CoatingWing() {
               Built for builders.
             </h2>
             <p data-reveal className="mt-6 max-w-xl text-base leading-relaxed text-sand/65 sm:text-lg">
-              Painting and coating packages for production homebuilding — estimated with engineering rigor,
+              Painting and coating packages for production homebuilding, estimated with engineering rigor,
               staffed to specification and delivered on schedule. When a community has hundreds of walls,
               every degree of process matters.
             </p>
@@ -112,21 +114,6 @@ export default function CoatingWing() {
               ))}
             </div>
 
-            {/* builder partners */}
-            <div data-partner-row className="mt-14">
-              <p data-reveal className="eyebrow text-sand/45">
-                Trusted by Colorado&rsquo;s premier homebuilders
-              </p>
-              <div className="mt-5 flex flex-wrap items-center gap-x-10 gap-y-4">
-                <span data-partner className="steel-head text-xl font-bold tracking-[0.18em] text-sand/85 uppercase">
-                  Toll Brothers
-                </span>
-                <span data-partner className="hidden h-8 w-px bg-sand/15 sm:block" aria-hidden="true" />
-                <span data-partner className="steel-head text-xl font-bold tracking-[0.18em] text-sand/85 uppercase">
-                  Aspen View Homes
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Andrés profile */}
@@ -151,9 +138,9 @@ export default function CoatingWing() {
               <h3 className="steel-head text-2xl font-bold text-sand">Andrés Gomez</h3>
               <p className="eyebrow mt-1.5 text-gold/80">Principal · Operations &amp; B2B Partnerships</p>
               <p className="mt-4 text-[15px] leading-relaxed text-sand/60">
-                Andrés spent more than fifteen years engineering high-stakes production systems before bringing
-                that discipline to construction. He flies planes for the same reason he walks every job twice:
-                precision isn&rsquo;t a habit you switch off.
+                Andrés spent more than fifteen years engineering high-stakes production systems before applying
+                that same discipline to construction. As a pilot, he understands that precision is never
+                optional, which is why he personally walks every job twice.
               </p>
             </div>
             <dl className="mt-8 space-y-4">
@@ -165,6 +152,28 @@ export default function CoatingWing() {
               ))}
             </dl>
           </aside>
+        </div>
+
+        {/* Builder partners — full width. Column rules are drawn as left borders
+            so they stay attached to the name they separate instead of stranding
+            themselves at the end of a wrapped row. */}
+        <div data-partner-row className="mt-16 border-t border-sand/10 pt-10 sm:mt-20">
+          <p data-reveal className="eyebrow text-sand/45">
+            Trusted by Colorado&rsquo;s premier homebuilders
+          </p>
+          <div className="mt-6 grid gap-y-5 sm:grid-cols-3 sm:gap-y-0">
+            {BUILDERS.map((b, i) => (
+              <span
+                key={b}
+                data-partner
+                className={`steel-head flex items-center text-lg font-bold tracking-[0.16em] text-sand/85 uppercase ${
+                  i > 0 ? 'sm:border-l sm:border-sand/15 sm:pl-8' : ''
+                }`}
+              >
+                {b}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

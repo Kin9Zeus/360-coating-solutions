@@ -4,7 +4,7 @@
 
 import foundersTarmac640 from '../assets/img/founders-tarmac-640.webp'
 import foundersTarmac1080 from '../assets/img/founders-tarmac-1080.webp'
-import familyPond from '../assets/img/family-pond-720.webp'
+import familyPortrait from '../assets/img/family-portrait-716.webp'
 import tatianaOffice from '../assets/img/tatiana-office-640.webp'
 import tatianaLivingRoom from '../assets/img/tatiana-living-room-640.webp'
 import portfolioDining720 from '../assets/img/portfolio-dining-720.webp'
@@ -27,17 +27,17 @@ export const IMG = {
     h: 941,
     alt: 'Tatiana and Andrés Gomez in flight jackets, smiling on an airport tarmac under a blue Colorado sky',
   },
-  familyPond: {
-    src: familyPond,
-    w: 565,
-    h: 850,
-    alt: 'The Gomez family — Andrés, Tatiana, Mateo and Lucas — standing together by a pond in Backcountry, Colorado',
+  familyPortrait: {
+    src: familyPortrait,
+    w: 716,
+    h: 860,
+    alt: 'The Gomez family: Andrés, Tatiana and their two sons, Mateo and Lucas, standing together by a pond in Backcountry, Colorado',
   },
   tatianaOffice: {
     src: tatianaOffice,
     w: 565,
     h: 850,
-    alt: 'Tatiana Gomez in a home office she designed — charcoal panel accent wall, brass lighting and gold velvet pillows',
+    alt: 'Tatiana Gomez in a home office she designed, with a charcoal panel accent wall, brass lighting and gold velvet pillows',
   },
   tatianaLivingRoom: {
     src: tatianaLivingRoom,
@@ -50,13 +50,13 @@ export const IMG = {
     srcSet: `${portfolioDining720} 720w, ${portfolioDining1280} 1280w`,
     w: 720,
     h: 960,
-    alt: 'Finished dining room design — round black-oak table, antique gold mirror and warm sconces over a cast fireplace',
+    alt: 'Finished dining room design with a round black-oak table, antique gold mirror and warm sconces over a cast fireplace',
   },
   logoPainting: {
     src: logoPainting,
     w: 900,
     h: 703,
-    alt: '360 Painting & Wall Design — Tatiana Gomez logo',
+    alt: '360 Painting & Wall Design, Tatiana Gomez logo',
   },
 }
 

@@ -11,7 +11,7 @@ import { useEffect, useRef } from 'react'
  * ever blocks autoplay. Per the site's motion policy, reels play for
  * everyone rather than being gated behind reduced-motion.
  */
-export default function VideoReel({ src, poster, label, badge, className = '' }) {
+export default function VideoReel({ src, poster, label, byline, badge, className = '' }) {
   const vidRef = useRef(null)
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function VideoReel({ src, poster, label, badge, className = '' })
         playsInline
         autoPlay
         preload="metadata"
-        aria-label={`${label} — silent looping video`}
+        aria-label={`${label}${byline ? `, ${byline}` : ''}. Silent looping video.`}
       >
         <source src={src} type="video/mp4" />
       </video>
@@ -59,7 +59,8 @@ export default function VideoReel({ src, poster, label, badge, className = '' })
       )}
 
       <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-clay/85 via-clay/25 to-transparent p-4 pt-12">
-        <span className="eyebrow text-bone">{label}</span>
+        <span className="eyebrow block text-bone">{label}</span>
+        {byline && <span className="eyebrow mt-1.5 block text-[9px] text-gold">{byline}</span>}
       </figcaption>
     </figure>
   )

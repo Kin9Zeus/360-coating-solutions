@@ -65,7 +65,7 @@ export default function Contact() {
               <span className="silk-italic text-gold"> full circle.</span>
             </h2>
             <p data-reveal className="mt-6 max-w-md text-base leading-relaxed text-sand/65 sm:text-lg">
-              Tell us about your walls — a single accent wall, a whole home, or a whole community.
+              Tell us about your walls: a single accent wall, a whole home, or a whole community.
               You&rsquo;ll hear back from Tatiana or Andrés themselves.
             </p>
 
@@ -194,7 +194,7 @@ export default function Contact() {
                   required
                   hint={
                     audience === 'homeowner'
-                      ? 'Rooms, style you love, timing — anything helps.'
+                      ? 'Rooms, style you love, timing. Anything helps.'
                       : 'Community, unit count, phases, target dates.'
                   }
                 >
@@ -220,7 +220,7 @@ export default function Contact() {
                       <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                         <path d="M4 10.5l4 4 8-9" />
                       </svg>
-                      Request sent — we&rsquo;ll be in touch within one business day.
+                      Request sent. We&rsquo;ll be in touch within one business day.
                     </p>
                   )}
                   {status === 'error' && (

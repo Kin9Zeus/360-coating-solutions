@@ -114,12 +114,12 @@ export const TESTIMONIALS = [
 export const COATING_SERVICES = [
   {
     title: 'New-construction production painting',
-    body: 'Full interior and exterior paint packages for premier builders — scheduled by phase, staffed to spec, documented at every walkthrough.',
+    body: 'Full interior and exterior paint packages for premier builders, scheduled by phase, staffed to spec and documented at every walkthrough.',
     icon: 'blueprint',
   },
   {
     title: 'Exterior coating systems',
-    body: 'Colorado sun, snow, wind and rapid temperature swings destroy unprotected surfaces. We specify primers that bond and topcoats that hold their color — not the cheapest can on the shelf.',
+    body: 'Colorado sun, snow, wind and rapid temperature swings destroy unprotected surfaces. We specify primers that bond and topcoats that hold their color.',
     icon: 'shield',
   },
   {
@@ -129,7 +129,7 @@ export const COATING_SERVICES = [
   },
   {
     title: 'Commercial & multi-unit',
-    body: 'Durable finishes for high-traffic interiors and building envelopes — scheduled evenings and weekends so your doors stay open.',
+    body: 'Durable finishes for high-traffic interiors and building developments, scheduled evenings and weekends so your doors stay open.',
     icon: 'building',
   },
 ]
@@ -140,16 +140,16 @@ export const PAINTING_SERVICES = [
     body: 'Furniture protected, rooms sequenced, homes left spotless. Interior finishes that wash clean for years; exteriors built for Colorado weather.',
   },
   {
-    title: 'Accent walls & wall design',
-    body: 'Geometric paneling, wood slats, shiplap and sculpted feature walls — designed for your room, then built and finished by hand.',
+    title: 'Accent Walls & Custom Wall Design',
+    body: 'From geometric paneling and wood slats to shiplap and sculpted feature walls, every design is thoughtfully created for your space, then meticulously built, installed and finished by hand.',
   },
   {
-    title: 'Color consultation & renderings',
-    body: 'See your room before a brush is lifted. Color chosen for how your light actually moves through the day, not how a chip looks in the store.',
+    title: 'Color Consultation & Photorealistic Renderings',
+    body: 'See your space before a single brush is lifted. Every color is selected according to your room, your furnishings and the way light moves throughout the day, not simply how a paint chip appears under store lighting.',
   },
   {
     title: 'Space & interior design',
-    body: 'Color, spatial planning and materials coordinated together — turning houses into homes and offices into rooms that earn their keep.',
+    body: 'Color, spatial planning and materials coordinated together, turning houses into homes and offices into rooms that earn their keep.',
   },
 ]
 
@@ -162,7 +162,7 @@ export const PAINTING_SERVICES = [
 export const FAQS = [
   {
     q: 'Do you handle HOA and ARC color approvals?',
-    a: 'Yes — end to end. We prepare the color submittals, complete the paperwork, and attend the HOA and ARC committee meetings on your behalf. Homeowners in Highlands Ranch and Backcountry regularly hand us a non-compliance letter and never have to appear at a meeting themselves.',
+    a: 'Yes, end to end. We prepare the color submittals, complete the paperwork, and attend the HOA and ARC committee meetings on your behalf. Homeowners in Highlands Ranch and Backcountry regularly hand us a non-compliance letter and never have to appear at a meeting themselves.',
   },
   {
     q: 'How long does a whole-home interior repaint take?',
@@ -174,7 +174,7 @@ export const FAQS = [
   },
   {
     q: 'Which Colorado communities do you serve?',
-    a: 'We serve Highlands Ranch, Lone Tree, Centennial, South Glenn, Columbine, Englewood, Littleton, Glendale, Lakewood, Aurora and Denver — the Front Range south of Denver, with a concentrated presence in the Backcountry neighborhood of Highlands Ranch.',
+    a: 'We serve Highlands Ranch, Lone Tree, Centennial, South Glenn, Columbine, Englewood, Littleton, Glendale, Lakewood, Aurora and Denver, the Front Range south of Denver, with a concentrated presence in the Backcountry neighborhood of Highlands Ranch.',
   },
   {
     q: 'What makes exterior paint last in Colorado?',
@@ -182,7 +182,7 @@ export const FAQS = [
   },
   {
     q: 'How long does Venetian plaster last?',
-    a: 'With basic care, a properly applied Venetian plaster wall stays beautiful for 15–20 years. We hand-trowel three to four whisper-thin coats, burnish to a polished stone-like depth, then seal it — which is what makes the finish resist aging.',
+    a: 'With basic care, a properly applied Venetian plaster wall stays beautiful for 15–20 years. We hand-trowel three to four whisper-thin coats, burnish to a polished stone-like depth, then seal it. That seal is what makes the finish resist aging.',
   },
 ]
 
@@ -193,28 +193,28 @@ export const SPECIALTY_TRADES = [
     id: 'venetian',
     eyebrow: 'Old-world finish',
     title: 'Venetian plaster',
-    body: 'Three to four whisper-thin coats, hand-troweled and burnished to a polished stone-like depth that shifts with the light. Sealed to resist aging — beautiful for 15–20 years with basic care.',
+    body: 'Three to four whisper-thin coats, hand-troweled and burnished to a polished stone-like depth that shifts with the light. Sealed to resist aging, it stays beautiful for 15–20 years with basic care.',
     detail: 'Prep · Multi-layer trowel · Custom color · Seal · Inspection',
   },
   {
     id: 'carpentry',
     eyebrow: 'Built to fit',
     title: 'Custom carpentry',
-    body: 'Cabinetry, built-ins, office fixtures and storage designed for your room and your habits — working with the grain of the wood rather than against it.',
+    body: 'Cabinetry, built-ins, office fixtures and storage designed for your room and your habits, working with the grain of the wood rather than against it.',
     detail: 'Kitchens · Built-ins · Office fixtures · Storage',
   },
   {
     id: 'millwork',
     eyebrow: 'Architectural character',
-    title: 'Custom millwork',
-    body: 'Crown molding, baseboards, chair rails and window casings milled to your home’s proportions. The detail mass-produced trim can never replicate.',
+    title: 'Custom Millwork & Trim',
+    body: 'Crown molding, baseboards, chair rails and window casings thoughtfully proportioned to your home. Every piece is precisely measured, cut and finished to achieve a level of craftsmanship that mass-produced trim cannot replicate.',
     detail: 'Crown · Base · Chair rail · Casings',
   },
   {
     id: 'facade',
     eyebrow: 'Seen from the street',
     title: 'Exterior facade design',
-    body: 'The stone and brick stay — everything else changes. We design the palette around the materials you can’t move, then repaint stucco, siding, trim and garage doors in systems built for Colorado sun, hail and freeze–thaw.',
+    body: 'The stone and brick stay, everything else changes. We design the palette around the materials you can’t move, then repaint stucco, siding, trim and garage doors in systems built for Colorado sun, hail and freeze–thaw.',
     detail: 'Color design · Stucco & siding · Trim, shutters & doors · HOA approval',
   },
 ]
