@@ -60,6 +60,7 @@ export default function Footer() {
                 ['#coating', 'For Builders'],
                 ['#painting', 'For Homeowners'],
                 ['#craft', 'Specialty Trades'],
+                ['#gallery', 'Before & After'],
                 ['#family', 'Our Family'],
                 ['#reviews', 'Reviews'],
                 ['#faq', 'FAQ'],

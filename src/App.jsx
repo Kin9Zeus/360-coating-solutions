@@ -8,6 +8,7 @@ import Gateway from './components/Gateway'
 import CoatingWing from './components/CoatingWing'
 import PaintingWing from './components/PaintingWing'
 import SpecialtyTrades from './components/SpecialtyTrades'
+import Transformations from './components/Transformations'
 import Family from './components/Family'
 import Reviews from './components/Reviews'
 import Faq from './components/Faq'
@@ -28,6 +29,7 @@ export default function App() {
         <CoatingWing />
         <PaintingWing />
         <SpecialtyTrades />
+        <Transformations />
         <Family />
         <Reviews />
         <Faq />

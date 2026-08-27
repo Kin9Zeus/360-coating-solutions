@@ -6,6 +6,7 @@ const LINKS = [
   { href: '#coating', label: 'For Builders' },
   { href: '#painting', label: 'For Homeowners' },
   { href: '#craft', label: 'Craft' },
+  { href: '#gallery', label: 'Before & After' },
   { href: '#family', label: 'Our Family' },
   { href: '#reviews', label: 'Reviews' },
 ]
