@@ -47,52 +47,66 @@ export default function Nav() {
   }, [open])
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
-        scrolled ? 'border-b border-sand/10 bg-carbon/80 backdrop-blur-md' : 'border-b border-transparent'
-      }`}
-    >
-      <nav aria-label="Main" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-[72px] sm:px-8">
-        <a href="#top" className="rounded-sm" aria-label="360, back to top">
-          <Mark />
-        </a>
-
-        <ul className="hidden items-center gap-8 lg:flex">
-          {LINKS.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="group relative py-2 text-[13px] font-medium tracking-[0.14em] text-sand/75 uppercase transition-colors duration-200 hover:text-sand"
-              >
-                {l.label}
-                <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true" />
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-3">
-          <a
-            href="#contact"
-            className="hidden rounded-full border border-gold/60 px-5 py-2.5 text-[13px] font-semibold tracking-[0.12em] text-gold uppercase transition-all duration-300 hover:bg-gold hover:text-carbon sm:inline-block"
-          >
-            Request a quote
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-300 ${
+          scrolled ? 'border-b border-sand/10 bg-carbon/80 backdrop-blur-md' : 'border-b border-transparent'
+        }`}
+      >
+        <nav aria-label="Main" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:h-[72px] sm:px-8">
+          <a href="#top" className="rounded-sm" aria-label="360, back to top">
+            <Mark />
           </a>
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            aria-expanded={open}
-            aria-label="Open menu"
-            className="flex h-11 w-11 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full lg:hidden"
-          >
-            <span className="h-px w-6 bg-sand" aria-hidden="true" />
-            <span className="h-px w-6 bg-gold" aria-hidden="true" />
-            <span className="h-px w-4 self-center bg-sand" aria-hidden="true" />
-          </button>
-        </div>
-      </nav>
 
-      {/* Mobile overlay menu */}
+          <ul className="hidden items-center gap-8 lg:flex">
+            {LINKS.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  className="group relative py-2 text-[13px] font-medium tracking-[0.14em] text-sand/75 uppercase transition-colors duration-200 hover:text-sand"
+                >
+                  {l.label}
+                  <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="#contact"
+              className="hidden rounded-full border border-gold/60 px-5 py-2.5 text-[13px] font-semibold tracking-[0.12em] text-gold uppercase transition-all duration-300 hover:bg-gold hover:text-carbon sm:inline-block"
+            >
+              Request a quote
+            </a>
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-expanded={open}
+              aria-label="Open menu"
+              className="flex h-11 w-11 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full lg:hidden"
+            >
+              <span className="h-px w-6 bg-sand" aria-hidden="true" />
+              <span className="h-px w-6 bg-gold" aria-hidden="true" />
+              <span className="h-px w-4 self-center bg-sand" aria-hidden="true" />
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/*
+        Mobile overlay menu — deliberately a SIBLING of <header>, not nested
+        inside it. `header` gets `backdrop-blur-md` once the page is scrolled,
+        and a `backdrop-filter` on an ancestor creates a containing block for
+        `position: fixed` descendants (the same rule as `transform`). With the
+        overlay nested inside, its `inset-0` was resolving against header's
+        own ~72px-tall box instead of the viewport everywhere except the hero
+        (where header has no blur yet, since `scrolled` is still false there)
+        — the menu still rendered, but overflowed that sliver of a box with no
+        backdrop behind it, so it showed through whatever section was
+        underneath. Living outside header, it always sizes against the
+        viewport regardless of scroll position.
+      */}
       <div
         className={`fixed inset-0 z-50 bg-carbon transition-opacity duration-300 lg:hidden ${
           open ? 'opacity-100' : 'pointer-events-none opacity-0'
@@ -138,6 +152,6 @@ export default function Nav() {
         </ul>
         <p className="eyebrow absolute bottom-8 left-8 text-sand/40">Highlands Ranch · Colorado</p>
       </div>
-    </header>
+    </>
   )
 }
