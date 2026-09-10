@@ -12,10 +12,9 @@ dist
 dist-ssr
 *.local
 
-# Secrets — never commit. Copy .env.example to .env for local testing.
+# Secrets — never commit.
 .env
 .env.*
-!.env.example
 
 # Raw video sources (~90 MB) — kept locally only. The site
 # actually uses the compressed src/assets/videos/*-web.mp4 and
