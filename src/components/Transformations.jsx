@@ -6,19 +6,6 @@ import { TRANSFORMATIONS } from '../content/transformations'
 const WIPE_MS = 650
 const EASE = 'cubic-bezier(.65,0,.35,1)'
 
-/**
- * One project, shown a whole frame at a time.
- *
- * The obvious pattern here is a drag-to-compare wipe, and it is the wrong one
- * for this set: only three of the seven pairs were shot from the same spot, so
- * on the rest a wipe stitches together two views that do not correspond and
- * reads as a mistake. Swapping the entire frame is always truthful — each
- * photograph stays whole and correctly composed — and the swap still earns its
- * moment by being revealed with the gold beam the Steel/Silk gateway uses.
- *
- * "After" is the resting state: the section should look like finished work at
- * a glance, with the past a deliberate thing you go and look at.
- */
 function Transformation({ item, hint = false }) {
   const [showAfter, setShowAfter] = useState(true)
   const [wiping, setWiping] = useState(false)
@@ -39,14 +26,6 @@ function Transformation({ item, hint = false }) {
     wipeTo(next)
   }
 
-  // The featured card demonstrates itself once, the first time it is seen:
-  // a control nobody notices is a control nobody uses. It never fires if the
-  // visitor got there first, and never repeats.
-  //
-  // Readiness is taken from img.complete rather than an onLoad prop. A cached
-  // image finishes before React attaches its handler, so onLoad never fires for
-  // a returning visitor and the hint would be dropped silently for exactly the
-  // people most likely to see the page twice.
   useEffect(() => {
     if (!hint || !figureRef.current) return
     const figure = figureRef.current
@@ -106,8 +85,6 @@ function Transformation({ item, hint = false }) {
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* The finished room sits on top and is clipped away to expose the one
-          underneath, so neither image ever moves. */}
       <img
         src={item.after.src}
         srcSet={item.after.srcSet}
@@ -124,9 +101,6 @@ function Transformation({ item, hint = false }) {
         }}
       />
 
-      {/* Gold edge riding the clip boundary. The wrapper is the full frame and
-          the bar is its right edge, so both sit just outside the card at rest
-          and only the travel between states is ever seen. */}
       <span
         aria-hidden="true"
         className={`pointer-events-none absolute inset-0 transition-opacity duration-200 ${
@@ -140,8 +114,6 @@ function Transformation({ item, hint = false }) {
         <span className="absolute inset-y-0 right-0 w-[3px] bg-gold shadow-[0_0_30px_8px_rgba(197,168,128,0.5)]" />
       </span>
 
-      {/* State switch. Two buttons rather than a hover reveal: hover does not
-          exist on touch, and both states have to be visible to be understood. */}
       <div
         role="group"
         aria-label={`${item.title}: choose before or after`}

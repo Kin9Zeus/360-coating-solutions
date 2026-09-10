@@ -47,7 +47,6 @@ export default function PaintingWing() {
           it as a compliment.
         </p>
 
-        {/* rendering reels — a bento of her design videos */}
         <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5">
           <VideoReel
             src={reelReveal}
@@ -92,7 +91,6 @@ export default function PaintingWing() {
         </div>
 
         <div className="mt-20 grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
-          {/* Tatiana profile */}
           <aside data-reveal className="order-2 lg:order-1">
             <blockquote className="border-l-2 border-teal/60 pl-6">
               <p className="silk-italic text-2xl leading-snug text-clay sm:text-[28px]">
@@ -113,7 +111,6 @@ export default function PaintingWing() {
             </p>
           </aside>
 
-          {/* services */}
           <div className="order-1 lg:order-2">
             <ul className="divide-y divide-clay/15">
               {PAINTING_SERVICES.map((s, i) => (

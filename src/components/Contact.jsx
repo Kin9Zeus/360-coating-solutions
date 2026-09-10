@@ -122,7 +122,6 @@ export default function Contact() {
             </dl>
           </div>
 
-          {/* form card */}
           <div data-reveal className="rounded-lg bg-sand p-6 shadow-[0_30px_90px_-30px_rgba(197,168,128,0.4)] sm:p-10">
             <fieldset className="mb-7">
               <legend className="mb-3 text-[13px] font-semibold tracking-wide text-clay">I am a…</legend>
@@ -148,10 +147,6 @@ export default function Contact() {
             </fieldset>
 
             <form onSubmit={handleSubmit} noValidate={false} className="grid gap-5 sm:grid-cols-2">
-              {/* Honeypot: invisible to real visitors, irresistible to bots.
-                  Clipped to 1px (not display:none) since some bots skip
-                  hidden fields; aria-hidden + tabIndex keep it out of reach
-                  for screen-reader and keyboard users. */}
               <input
                 type="text"
                 name="website"
@@ -234,7 +229,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* service area — eleven Front Range cities, kept to one quiet band */}
         <div data-reveal className="mt-20 border-t border-sand/10 pt-8">
           <p className="eyebrow text-sand/45">Serving the Front Range</p>
           <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2.5">

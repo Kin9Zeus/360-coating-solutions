@@ -3,15 +3,6 @@ import { useReveal } from '../hooks/useReveal'
 import Eyebrow from './Eyebrow'
 import { FAQS } from '../content/site'
 
-/**
- * Answers to the questions prospects actually ask before calling.
- *
- * Deliberately rendered as plain visible text rather than an accordion:
- * collapsed content is harder for search engines and AI answer engines to
- * extract, and Google's FAQ structured-data policy requires the answers to
- * be visible on the page. The matching FAQPage JSON-LD lives in index.html
- * and must mirror this copy exactly.
- */
 export default function Faq() {
   const ref = useRef(null)
   useReveal(ref)

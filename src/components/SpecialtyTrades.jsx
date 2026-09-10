@@ -21,9 +21,6 @@ const REELS = {
   millwork: { src: reelMillwork, poster: posterMillwork, label: 'Custom Millwork, Crown & Panel Detail' },
 }
 
-// The facade service is shown as a pair — two different Colorado homes, each
-// carried from dated to current, because the proof of exterior work is the
-// before-and-after itself.
 const FACADE_REELS = [
   { src: reelFacadeA, poster: posterFacadeA, label: 'Board-and-Batten Gable & Charcoal Doors' },
   { src: reelFacadeB, poster: posterFacadeB, label: 'Siding, Trim & Garage Doors Refreshed' },
@@ -52,7 +49,6 @@ export default function SpecialtyTrades() {
           </p>
         </div>
 
-        {/* Venetian plaster — the headline craft */}
         <div className="mt-16 grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
           <VideoReel {...REELS.venetian} className="aspect-[4/3] lg:col-span-7 lg:aspect-[16/11]" />
           <div data-reveal className="lg:col-span-5">
@@ -63,7 +59,6 @@ export default function SpecialtyTrades() {
           </div>
         </div>
 
-        {/* Carpentry + millwork */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:mt-16 lg:gap-12">
           {[carpentry, millwork].map((t) => (
             <article key={t.id}>
@@ -78,8 +73,6 @@ export default function SpecialtyTrades() {
           ))}
         </div>
 
-        {/* Exterior facade — the closing movement: step outside, shown as a
-            diptych of two homes rather than a single hero */}
         <div className="mt-16 border-t border-clay/15 pt-14 lg:mt-24 lg:pt-16">
           <div data-reveal className="max-w-2xl">
             <p className="eyebrow text-teal">{facade.eyebrow}</p>

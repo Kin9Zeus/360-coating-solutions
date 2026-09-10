@@ -1,9 +1,7 @@
 # 360 Coating Solutions — https://www.360coatingsolutions.com
 #
-# Everything is open to everyone. AI answer engines are allowed on purpose:
-# blocking GPTBot / PerplexityBot / ClaudeBot / Google-Extended would mean
-# those assistants can never cite this business when someone asks them for a
-# painter in Highlands Ranch — which is exactly the query we want to win.
+# Everything is open to everyone.
+# We want search engines and assistants to be able to cite this business.
 
 User-agent: *
 Allow: /

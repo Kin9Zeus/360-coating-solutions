@@ -1,9 +1,3 @@
-// ---------------------------------------------------------------------------
-// EDIT ME — every real-world detail lives here so it can be swapped in one
-// place. Content migrated from 360paintingandwalldesign.com (the previous
-// site), condensed so the new page stays uncluttered.
-// ---------------------------------------------------------------------------
-
 export const CONTACT = {
   phone: '(307) 251-7072',
   email: 'admin@360coatingsolutions.com',
@@ -13,21 +7,11 @@ export const CONTACT = {
   facebook: 'https://www.facebook.com/share/191onPjoUz/',
 }
 
-// Studio credit shown in the footer. Kept here (not hardcoded in Footer.jsx)
-// so the studio mark follows the same edit-in-one-place rule as everything
-// else on this page.
 export const CREDIT = {
   studio: 'Devleck',
   whatsapp: 'https://wa.link/z2gudn',
 }
 
-// The contact form posts to /api/contact, handled by server/index.js
-// (Resend). Which inbox each inquiry lands in — homeowner vs. builder — is
-// configured there via CONTACT_EMAIL_HOMEOWNER / CONTACT_EMAIL_BUILDER env
-// vars, not here, since recipient addresses are server-side only. See
-// README.md → "Contact form (Resend + Railway)".
-
-// Ten cities from the previous site, ordered from home base outward.
 export const SERVICE_AREAS = [
   'Highlands Ranch',
   'Lone Tree',
@@ -153,12 +137,6 @@ export const PAINTING_SERVICES = [
   },
 ]
 
-// Real questions prospects ask, answered in 40–60 words each — the length AI
-// search engines extract cleanest. Every answer is grounded in something
-// verifiable from the business (testimonials, service pages), never invented.
-// These render visibly in the FAQ section AND feed the FAQPage schema in
-// index.html; Google requires FAQ schema content to be visible on the page,
-// so the two must stay in sync.
 export const FAQS = [
   {
     q: 'Do you handle HOA and ARC color approvals?',
@@ -186,8 +164,6 @@ export const FAQS = [
   },
 ]
 
-// The specialty trades — carried over from the old site's service pages.
-// These sit between the two wings because both companies draw on them.
 export const SPECIALTY_TRADES = [
   {
     id: 'venetian',

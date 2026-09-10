@@ -2,9 +2,6 @@ import { useRef } from 'react'
 import { useReveal } from '../hooks/useReveal'
 import Eyebrow from './Eyebrow'
 
-// Three commitments. Each card draws another arc of the circle, so the count
-// is read from the array rather than hardcoded — dropping or adding a value
-// re-divides the ring automatically.
 const VALUES = [
   {
     title: 'Ambition & Growth',
@@ -20,7 +17,6 @@ const VALUES = [
   },
 ]
 
-// Arc from 12 o'clock sweeping (i+1)/total of the full circle.
 function arcPath(i, total) {
   const theta = ((i + 1) * 2 * Math.PI) / total
   const x = 12 + 9 * Math.sin(theta)
@@ -77,7 +73,6 @@ export default function Philosophy() {
               data-reveal-delay={i * 0.1}
               className="group relative bg-ink p-8 transition-colors duration-500 hover:bg-steel"
             >
-              {/* each value completes another arc of the circle */}
               <svg viewBox="0 0 24 24" className="h-6 w-6 text-gold/70 transition-colors duration-300 group-hover:text-gold" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.2" opacity="0.4" />
                 {i === VALUES.length - 1 ? (
