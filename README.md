@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="../media/360_painting_andwall_design_logo_white_background.png" alt="360 Coating Solutions Logo" width="350" style="margin-bottom: 20px; border-radius: 8px;" />
+  <img src="./public/logo.png" alt="360 Coating Solutions Logo" width="350" style="margin-bottom: 20px; border-radius: 8px;" />
   <h1>360 Coating Solutions & 360 Painting and Wall Design</h1>
   <p><strong>A Premium, High-Performance Web Experience Engineered for Excellence</strong></p>
 </div>
