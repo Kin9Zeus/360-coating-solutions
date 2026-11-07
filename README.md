@@ -9,6 +9,7 @@
 <br/>
 
 [![Live site](https://img.shields.io/badge/Live_site-360coatingsolutions.com-c5a880?style=for-the-badge&labelColor=0b0f19)](https://360coatingsolutions.com/)
+[![CI](https://github.com/Kin9Zeus/360-coating-solutions/actions/workflows/ci.yml/badge.svg)](https://github.com/Kin9Zeus/360-coating-solutions/actions/workflows/ci.yml)
 
 ![React](https://img.shields.io/badge/React_19-0b0f19?style=flat-square&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-0b0f19?style=flat-square&logo=vite&logoColor=c5a880)
