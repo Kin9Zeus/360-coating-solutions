@@ -116,6 +116,10 @@ Single service on **Railway**, from the repository root: Railway runs `npm insta
 | `CONTACT_EMAIL_ADMIN` | Default inbox for new inquiries |
 | `CONTACT_EMAIL_HOMEOWNER` / `CONTACT_EMAIL_BUILDER` | Optional per-audience inboxes |
 
+## License
+
+© 2026 Devleck (Aleck Martinez). **All rights reserved.** The code is published as a portfolio case study: you may read it and run it locally to evaluate it, but you may not copy, redistribute or use it in another product without written permission. Brand names, logos, photographs and texts belong to their respective owners. See [LICENSE](LICENSE) · Permissions: contact@devleck.com
+
 ---
 
 <div align="center">
